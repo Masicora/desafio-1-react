@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+import Header from "./components/Header";
+import Footer from './components/Footer';
+import Tarjeta from './components/Card';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div>
+      <Header titulo="Galería de imágenes con React" />
+      <div>
+        <Tarjeta src="https://placekitten.com/300/300?image=1" titulo="Mehmet" descripcion="Un gatito príncipe" />
+        <Tarjeta src="https://placekitten.com/300/300?image=5" titulo="Nurbanu" descripcion="La sultana de todos" />
+        <Tarjeta src="https://placekitten.com/300/300?image=3" titulo="Mustafá" descripcion="El hijo ilegítimo" />
+        <Tarjeta src="https://placekitten.com/300/300?image=4" titulo="Shezade" descripcion="La desechada" />
+      </div>
+      <Footer titulo="Todos los derechos reservados" />
+    </div >
   );
 }
 
